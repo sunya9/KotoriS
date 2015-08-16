@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="@color/flat_button_pressed_background_color" android:state_pressed="true"/>
-    <item android:color="@color/flat_button_hovered_background_color" android:state_hovered="true"/>
-    <item android:color="@android:color/transparent"/>
+    <item android:drawable="@color/flat_button_pressed_background_color" android:state_pressed="true"/>
+    <item android:drawable="@color/flat_button_hovered_background_color" android:state_hovered="true"/>
+    <item android:drawable="@android:color/transparent"/>
 </selector>
