@@ -22,7 +22,6 @@ public class Welcome extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
