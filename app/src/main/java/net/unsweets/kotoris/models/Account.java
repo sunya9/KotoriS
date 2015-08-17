@@ -29,8 +29,8 @@ public class Account extends Model {
     @Column(name = "name")
     public String name;
 
-    @Column(name = "icon")
-    public Blob icon;
+    @Column(name = "icon_url")
+    public String iconUrl;
 
     @Column(name = "rank")
     public int rank;
