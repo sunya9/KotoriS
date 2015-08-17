@@ -1,4 +1,4 @@
-package net.unsweets.kotoris.model;
+package net.unsweets.kotoris.models;
 
 import android.provider.BaseColumns;
 
@@ -14,6 +14,8 @@ import com.activeandroid.annotation.Table;
 public class Client extends Model {
     private static final String TAG = Client.class.getSimpleName();
 
+    @Column(name = "user_id")
+    public String userId;
     @Column(name = "api_key")
     public String apiKey;
 
