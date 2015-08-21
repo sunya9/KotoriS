@@ -1,23 +1,20 @@
 package net.unsweets.kotoris;
 
-import android.test.ActivityUnitTestCase;
-
-import junit.framework.TestCase;
-
 /**
  * Created by mugen_000 on 2015/08/21.
  */
-public class MainActivityTest extends ActivityUnitTestCase<MainActivity> {
+public class MainActivityTest extends BaseActivityUnitTestCase<MainActivity> {
 
     public MainActivityTest() {
         super(MainActivity.class);
     }
 
+    @Override
     public void setUp() throws Exception {
         super.setUp();
-
     }
 
+    @Override
     public void tearDown() throws Exception {
 
     }
