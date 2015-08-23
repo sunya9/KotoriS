@@ -1,5 +1,8 @@
 package net.unsweets.kotoris;
 
+import android.graphics.Bitmap;
+import android.os.AsyncTask;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,5 +29,39 @@ public class Util {
         }
 
         return map;
+    }
+
+    public static class AsyncImageLoad{
+        private final AsyncTask<String, Void, Bitmap> mAsyncTask;
+        private AsyncImageLoadListener mListener;
+
+        public AsyncImageLoad(){
+            mAsyncTask = new AsyncTask<String, Void, Bitmap>() {
+
+                @Override
+                protected Bitmap doInBackground(String... params) {
+
+                    return null;
+                }
+
+                @Override
+                protected void onPostExecute(Bitmap bitmap) {
+                    if (mListener != null)
+                        mListener.onPostExecute(bitmap);
+                }
+            };
+        }
+
+        public void execute(String url){
+            if(mAsyncTask != null) mAsyncTask.execute(url);
+        }
+
+        public void setPostExecute(AsyncImageLoadListener listener){
+            mListener = listener;
+        }
+
+        public interface AsyncImageLoadListener {
+            void onPostExecute(Bitmap bitmap);
+        }
     }
 }
