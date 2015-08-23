@@ -9,12 +9,14 @@ import com.activeandroid.annotation.Table;
  */
 
 @Table(name = "timeline_type")
-public class TimelineType  extends Model{
+public class TimelineType extends Model {
     private static final String TAG = TimelineType.class.getSimpleName();
-
     @Column(name = "type")
     public int type;
-
     @Column(name = "name")
     public String name;
+
+    public TimelineType() {
+        super();
+    }
 }
