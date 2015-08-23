@@ -15,7 +15,7 @@ public class Client extends Model {
     private static final String TAG = Client.class.getSimpleName();
 
     @Column(name = "user_id")
-    public String userId;
+    public Long userId;
     @Column(name = "api_key")
     public String apiKey;
 
@@ -28,8 +28,14 @@ public class Client extends Model {
     @Column(name = "access_token_secret", notNull = true)
     public String accessTokenSecret;
 
+    @Column(name = "rank", notNull = true)
+    public int rank;
+
     @Column(name = "name")
     public String name;
+
+    @Column(name = "account")
+    public Account account;
 
     public Client(){
         super();
