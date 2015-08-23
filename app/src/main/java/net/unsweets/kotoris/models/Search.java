@@ -1,6 +1,7 @@
 package net.unsweets.kotoris.models;
 
 import com.activeandroid.Model;
+import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 
 /**
@@ -10,6 +11,8 @@ import com.activeandroid.annotation.Table;
 @Table(name = "search")
 public class Search extends Model {
     private static final String TAG = Search.class.getSimpleName();
+    @Column(name = "keyword")
+    public String keyword;
 
     public Search() {
         super();
